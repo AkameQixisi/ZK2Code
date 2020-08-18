@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ZK2Code:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ZK2Code_jar</output-path>
+    <root id="archive" name="ZK2Code.jar">
+      <element id="module-output" name="ZK2Code" />
+    </root>
+  </artifact>
+</component>

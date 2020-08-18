@@ -1,0 +1,43 @@
+JFDML JFormDesigner: "7.0.2.4.305" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "0, 0:1.0"
+			"$rowSpecs": "0:1.0, 0"
+			"$alignTop": true
+			"$alignLeft": true
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jScrollPane"
+				add( new FormComponent( "javax.swing.JList" ) {
+					name: "jList"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+				"gridwidth": 2
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "jCheckBox"
+				"text": "隐藏已完成"
+				addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "jCheckBoxStateChanged", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 1
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButton"
+				"text": "完成"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "jButtonMouseClicked", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 1
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+				"gridx": 1
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 260, 210 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

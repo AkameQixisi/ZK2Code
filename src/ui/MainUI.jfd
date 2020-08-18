@@ -1,0 +1,57 @@
+JFDML JFormDesigner: "7.0.2.4.305" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) {
+			"hgap": 5
+			"vgap": 5
+		} ) {
+			name: "this"
+			"title": "点数系统"
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "jTabbedPane"
+				"tabPlacement": 3
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "jMenuBar"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "jMenu_Settings"
+					"text": "设置"
+					add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+						name: "jMenu_Fonts"
+						"text": "字体"
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "jMenuItem_addComFontSize"
+							"text": "增大普通字体"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jMenuItem_addComFontSizeActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "jMenuItem_minusComFontSize"
+							"text": "减小普通字体"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jMenuItem_minusComFontSizeActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JPopupMenu$Separator" ) {
+							name: "jMenuSeparator"
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "jMenuItem_addCounterFontSize"
+							"text": "增大计时字体"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jMenuItem_addCounterFontSizeActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "jMenuItem_minusCounterFontSize"
+							"text": "减小计时字体"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jMenuItem_minusCounterFontSizeActionPerformed", true ) )
+						} )
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 140, 125 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

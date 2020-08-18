@@ -1,0 +1,49 @@
+JFDML JFormDesigner: "7.0.2.4.305" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "0"
+			"$rowSpecs": "0, 0, 0, 0"
+			"$hGap": 5
+			"$vGap": 5
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel_PointText"
+				"text": "已有点数：%.1f（可购买%d小时电脑使用时间）"
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel_BuyHit"
+				"text": "购买%d小时"
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+				"gridy": 1
+			} )
+			add( new FormComponent( "javax.swing.JSlider" ) {
+				name: "jSlider_WhatHours"
+				addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "jSlider_WhatHoursStateChanged", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 2
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButton_Buy"
+				"text": "购买"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "jButton_BuyMouseClicked", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 3
+				"weightx": 1.0
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 210, 155 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

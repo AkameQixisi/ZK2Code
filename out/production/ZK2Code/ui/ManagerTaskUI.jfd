@@ -1,0 +1,89 @@
+JFDML JFormDesigner: "7.0.2.4.305" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "0, 0"
+			"$rowSpecs": "0, 0, 0, 0, 0"
+			"$hGap": 5
+			"$vGap": 5
+		} ) {
+			name: "this"
+			"title": "任务管理"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel_WhichTask"
+				"text": "添加的任务类型："
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"weightx": 1.0
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "jComboBox_WhichTask"
+				"selectedIndex": -1
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"weightx": 3.0
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel_Description"
+				"text": "任务内容："
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 1
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextField_Description"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 1
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel_Times"
+				"text": "任务总次数："
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 2
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextField_Times"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 2
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel_Point"
+				"text": "每次完成可获得点数："
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 3
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextField_Point"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 3
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButton_OK"
+				"text": "确定发布"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "jButton_OKMouseClicked", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 4
+				"gridwidth": 2
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 205, 215 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

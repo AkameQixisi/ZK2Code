@@ -1,0 +1,57 @@
+JFDML JFormDesigner: "7.0.2.4.305" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "0"
+			"$rowSpecs": "0, 0, 0, 0, 0"
+			"$hGap": 5
+			"$vGap": 5
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel_UesrPoint"
+				"text": "%s当前的点数为：%.1f"
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel_ModefiyHit"
+				"text": "修改为：%.1f"
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+				"gridy": 1
+			} )
+			add( new FormComponent( "javax.swing.JSlider" ) {
+				name: "jSlider_WhatPoint"
+				addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "jSlider_WhatPointStateChanged", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 2
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+				"weightx": 1.0
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButton_OK"
+				"text": "确定"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "jButton_OKMouseClicked", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 3
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButton_TaskManage"
+				"text": "任务管理（支线任务发布）"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "jButton_TaskManageMouseClicked", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 4
+				"insets": new java.awt.Insets( 5, 5, 5, 5 )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 190, 195 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}
